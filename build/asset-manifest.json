@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/front-challenge/static/css/main.7711d410.css",
-    "main.js": "/front-challenge/static/js/main.25e46d08.js",
+    "main.css": "/front-challenge/static/css/main.b4a892bc.css",
+    "main.js": "/front-challenge/static/js/main.8b2b4ba6.js",
     "static/js/787.c186b321.chunk.js": "/front-challenge/static/js/787.c186b321.chunk.js",
-    "static/media/Pointer.svg": "/front-challenge/static/media/Pointer.921f0689f5a3cbfb5d96.svg",
+    "static/media/Pointer.svg": "/front-challenge/static/media/Pointer.82bff5368f7c67993516.svg",
     "static/media/loop-studios.svg": "/front-challenge/static/media/loop-studios.7778c957c5751d1502cc.svg",
     "static/media/photosnap.svg": "/front-challenge/static/media/photosnap.5a867c13a374d62b400f.svg",
     "static/media/manage.svg": "/front-challenge/static/media/manage.5a528a9669728fb94c8c.svg",
@@ -18,12 +18,12 @@
     "index.html": "/front-challenge/index.html",
     "static/media/bg-header-mobile.svg": "/front-challenge/static/media/bg-header-mobile.208894f4e43f11bac3f20083d633d936.svg",
     "static/media/icon-remove.svg": "/front-challenge/static/media/icon-remove.70c075ce001e5ccae7c68a570c4b7bc0.svg",
-    "main.7711d410.css.map": "/front-challenge/static/css/main.7711d410.css.map",
-    "main.25e46d08.js.map": "/front-challenge/static/js/main.25e46d08.js.map",
+    "main.b4a892bc.css.map": "/front-challenge/static/css/main.b4a892bc.css.map",
+    "main.8b2b4ba6.js.map": "/front-challenge/static/js/main.8b2b4ba6.js.map",
     "787.c186b321.chunk.js.map": "/front-challenge/static/js/787.c186b321.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7711d410.css",
-    "static/js/main.25e46d08.js"
+    "static/css/main.b4a892bc.css",
+    "static/js/main.8b2b4ba6.js"
   ]
 }
