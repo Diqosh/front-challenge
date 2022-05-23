@@ -1,5 +1,5 @@
  .AppFilter{
-     height: fit-content;
+
      width: 80%;
      margin:  -36px auto 0 auto;
      background-color: #fff;
@@ -9,7 +9,21 @@
      display: flex;
      justify-content: space-between;
      min-height: 72px;
+     transition: .5s;
  }
+
+ .AppFilter.minimize{
+
+     line-height:0;
+     min-height: 0;
+     height: 0;
+     overflow: hidden;
+     padding: 0 35px 0 35px;
+     margin-top: 0;
+     transition: .5s;
+ }
+
+
 
  .filter__items{
      display: flex;
@@ -48,6 +62,9 @@
      justify-content: center;
      align-items: center;
  }
+ .item__deleteImage:hover{
+     cursor: url("../../assets/images/Pointer.svg"), auto;
+ }
 
  .filter__addingInput{
      outline: none;
@@ -59,4 +76,7 @@
      border: none;
      text-decoration: underline;
 
+ }
+ .filter__clear:hover{
+     cursor: url("../../assets/images/Pointer.svg"), auto;
  }

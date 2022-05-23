@@ -1,44 +1,57 @@
 import './app-company-detail.css'
 
-import logo from '../../assets/images/photosnap.svg'
-import React from 'react';
+import Company from "../../model";
 
 
-function AppCompanyDetail() {
+function AppCompanyDetail(props: {
+    company: Company,
+    addFilter: any
+}) {
 
+
+    let companyFilters = [props.company.role, props.company.level, ...props.company.languages, ...props.company.tools]
+
+
+    const companyFiltersHTML = companyFilters.map((item, i) => {
+        return (
+            <div key={i} className="CompanyDetail_filterItem" onClick={() => {
+                props.addFilter(item)
+            }}>{item}</div>
+        )
+
+
+    })
 
 
     return (
-        <div className="AppCompanyDetail">
+        <div className={'AppCompanyDetail ' + (props.company.featured ? 'Featured' : '')}>
 
             <div className="CompanyDetail__wrapper">
                 <div className="CompanyDetail__logo">
-                    <img src={logo} alt=""/>
+
+                    <img src={require('../../assets/' + props.company.logo.substring(2))}
+                         alt={process.env.PUBLIC_URL + ''}/>
                 </div>
                 <div className="CompanyDetail__text">
 
                     <div className="CompanyDetail__company">
                         <div className="companyTitle">
-                            Photosnap
+                            {props.company.company}
                         </div>
 
-                        <div className="isNew">
-                            NEW!
-                        </div>
-                        <div className="isFeatured">
-                            FEATURED
-                        </div>
+                        {props.company.new && <div className="isNew"> NEW!</div>}
+                        {props.company.featured && <div className="isFeatured"> FEATURED </div>}
 
                     </div>
                     <div className="CompanyDetail__title">
-                        Senior Fronted Developer
+                        {props.company.position}
                     </div>
                     <div className="CompanyDetail__description">
 
                         <ul className="description">
-                            <li className="descriptionItem">1d ago</li>
-                            <li className="descriptionItem">Full Time</li>
-                            <li className="descriptionItem">USA Only</li>
+                            <li className="descriptionItem">{props.company.position}</li>
+                            <li className="descriptionItem">{props.company.contract}</li>
+                            <li className="descriptionItem">{props.company.location}</li>
                         </ul>
 
                     </div>
@@ -46,14 +59,10 @@ function AppCompanyDetail() {
                 </div>
             </div>
 
-
             <div className="CompanyDetail__filters">
-                <div className="CompanyDetail_filterItem">Frontend</div>
-                <div className="CompanyDetail_filterItem">Senior</div>
-                <div className="CompanyDetail_filterItem">HTML</div>
-                <div className="CompanyDetail_filterItem">CSS</div>
-                <div className="CompanyDetail_filterItem">JavaScript</div>
+                {companyFiltersHTML}
             </div>
+
         </div>
     );
 }
