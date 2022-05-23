@@ -1,0 +1,62 @@
+ .AppFilter{
+     height: fit-content;
+     width: 80%;
+     margin:  -36px auto 0 auto;
+     background-color: #fff;
+     border-radius: 5px;
+     padding: 25px 35px 25px 35px;
+
+     display: flex;
+     justify-content: space-between;
+     min-height: 72px;
+ }
+
+ .filter__items{
+     display: flex;
+     gap: 16px;
+     flex-wrap: wrap;
+     align-items: center;
+ }
+
+ .filter__item{
+     display: flex;
+     border-radius: 5px;
+     overflow: hidden;
+     align-items: center;
+
+ }
+
+ .item__text{
+     display: flex;
+
+     align-items: center;
+     padding: 0 9px;
+     background-color: #F2F2F2;
+
+
+
+
+     height: 32px;
+
+
+ }
+ .item__deleteImage{
+     background-color: #5CA5A5;
+     width: 32px;
+     height: 32px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .filter__addingInput{
+     outline: none;
+     border: none;
+ }
+
+ .filter__clear{
+     background-color: transparent;
+     border: none;
+     text-decoration: underline;
+
+ }
