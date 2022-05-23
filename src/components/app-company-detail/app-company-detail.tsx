@@ -30,7 +30,7 @@ function AppCompanyDetail(props: {
                 <div className="CompanyDetail__logo">
 
                     <img src={require('../../assets/' + props.company.logo.substring(2))}
-                         alt={process.env.PUBLIC_URL + ''}/>
+                         alt=''/>
                 </div>
                 <div className="CompanyDetail__text">
 
@@ -49,7 +49,7 @@ function AppCompanyDetail(props: {
                     <div className="CompanyDetail__description">
 
                         <ul className="description">
-                            <li className="descriptionItem">{props.company.position}</li>
+                            <li className="descriptionItem">{props.company.postedAt}</li>
                             <li className="descriptionItem">{props.company.contract}</li>
                             <li className="descriptionItem">{props.company.location}</li>
                         </ul>

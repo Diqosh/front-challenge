@@ -6,32 +6,37 @@ import Company from "../../model";
 
 
 interface Filter {
-    name: string;
+    position: string
+    role: string
+    level: string
+    postedAt: string
+    languages: string[]
+
 }
 
 
-function AppCompanyList(props: { companies: Company[], addFitler: any, filters: string[] }) {
+function AppCompanyList(props: { companies: Company[], addFitler: any, userFilters: string[] }) {
 
     let addFilter = (filter: string) => {
         props.addFitler(filter)
     }
 
 
-    const elems = props.companies.map(item => {
-        let filtersOfItem = [item.role, item.featured, item.level, ...item.languages, ...item.tools]
+    const elems = props.companies.map(company => {
+        let filtersOfCompany = [company.role,  company.position,  company.level, ...company.languages, ...company.tools]
+
+        let intersects = filtersOfCompany.filter(item => props.userFilters.includes(item))
 
 
-        let intersects = props.filters.filter(item => filtersOfItem.includes(item))
-
-        if (props.filters.length === 0) {
+        if (props.userFilters.length === 0) {
             return (
-                <AppCompanyDetail key={item.id} company={item} addFilter={addFilter}/>
+                <AppCompanyDetail key={company.id} company={company} addFilter={addFilter}/>
             )
         } else {
-            if (intersects.length > 0) {
+            if (intersects.length === props.userFilters.length) {
 
                 return (
-                    <AppCompanyDetail key={item.id} company={item} addFilter={addFilter}/>
+                    <AppCompanyDetail key={company.id} company={company} addFilter={addFilter}/>
                 )
 
             }

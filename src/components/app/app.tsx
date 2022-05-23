@@ -34,12 +34,7 @@ function App() {
     const addFitler = (filter: string) => {
 
         let res = [...state]
-        // let isHear = false
-        // res.forEach(item =>{
-        //     if (item.name === filter){
-        //         isHear = true
-        //     }
-        // })
+
         if (!res.includes(filter)) {
             let res = [...state, filter]
             setState(res)
@@ -57,7 +52,7 @@ function App() {
 
             <AppFilter filters={state} clearFilters={clearFilters} deleteFilters={deleteFilters}/>
 
-            <AppCompanyList companies={data} addFitler={addFitler} filters={state}/>
+            <AppCompanyList companies={data} addFitler={addFitler} userFilters={state}/>
 
         </div>
     );

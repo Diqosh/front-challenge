@@ -29,6 +29,7 @@
 @media (max-width: 820px){
     .AppCompanyDetail{
         flex-direction: column;
+        padding: 0 20px;
     }
 }
 
@@ -140,6 +141,16 @@
     margin: 0 16px;
 
 }
+
+
+@media (max-width: 500px){
+    .descriptionItem:not(:last-child):after{
+
+        margin: 0 4px;
+
+    }
+}
+
 .CompanyDetail__filters{
     display: flex;
     flex-wrap: wrap;

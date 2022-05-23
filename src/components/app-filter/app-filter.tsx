@@ -42,7 +42,7 @@ function AppFilter(props: {
                 {displayFilters}
 
 
-                {/*<input className="filter__addingInput" type="text"/>*/}
+
             </div>
 
             <button className="filter__clear" onClick={() => props.clearFilters()}>Clear</button>
